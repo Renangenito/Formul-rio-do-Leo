@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+
+h1{
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    font-weight: 100;
+    font-size: 50px;
+    color: white;
+}
+
+.cadastros{
+    display: flex;
+    border-top: 1px solid white;
+    justify-content: center;
+}
+
+.cadastro-tabela{
+    margin-top: 50px;
+}
+
+th{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+th,td{
+    border: 1px solid white;
+    padding: 5px 40px;
+}
+
+td{
+    font-size: 18px;
+}

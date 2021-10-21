@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Flamenco&display=swap");
+
+.formulario-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(120, 120, 120, 0.3);
+    border-radius: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.formulario-titulo{
+    font-family: 'Flamenco', cursive;
+    font-size: 40px;
+    margin: 0;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.formulario-cadastro input{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    outline: none;
+
+}
+
+.formulario-div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formulario-label{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.botao{
+    width: 406px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #a5960d;
+    color: white;
+}
+
+.botao:hover{
+    background-color: #6d630c;
+    cursor: pointer;
+}
+
+.botao:active{
+    background-color: #a5960d;
+}
+

@@ -1,0 +1,36 @@
+.cabecalho{
+    width: 100%;
+    height: 20px;
+    /* background-color: #a5960d; */
+    
+}
+
+.cabecalho-ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 65px 0 0 30px;
+    margin: 0 60px 0 0;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    background-color: #a5960d;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    padding-bottom: 5px;
+}
+
+li a{
+    color: white;
+}
+Link{
+    color: white;
+}
