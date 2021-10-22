@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const FormularioCadastro = () => {
-    const [nomeCad, setNome] = useState()
-    const [cpfCad, setCpf] = useState()
-    const [telefoneCad, setTelefone] = useState()
-    const [emailCad, setEmail] = useState()
+    const [nomeCad, setNome] = useState("")
+    const [cpfCad, setCpf] = useState("")
+    const [telefoneCad, setTelefone] = useState("")
+    const [emailCad, setEmail] = useState("")
     let listaCadastros = JSON.parse(localStorage.getItem('listaCadastros') || '[]')
-
+   
     const handleClick = (e) =>{
         e.preventDefault()
         
@@ -16,13 +16,18 @@ const FormularioCadastro = () => {
             telefone: telefoneCad,
             email: emailCad
         })
+        
         localStorage.setItem("listaCadastros", JSON.stringify(listaCadastros))
         
-    console.log(listaCadastros)
+        setNome("")
+        setCpf("")
+        setTelefone("")
+        setEmail("")
     }
 
-
     return (
+       <div>
+        
         <form className="formulario-cadastro" >
 
             <div className="formulario-div">
@@ -79,11 +84,9 @@ const FormularioCadastro = () => {
             <div className="div-botao">
                 <button className="botao" onClick={handleClick}>Cadastrar</button>
             </div>
-
-
-
-
         </form>
+       
+        </div>
     )
 }
 

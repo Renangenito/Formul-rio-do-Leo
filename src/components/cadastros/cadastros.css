@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+html{
+    margin: 0;
+}
 
+.cadastros{
+    display: flex;
+    border-top: 1px solid white;
+    width: 100%;
+    padding: 30px 0 0 10px;
+}
+
+.cadastrados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
 
 h1{
     text-align: center;
@@ -9,26 +25,35 @@ h1{
     color: white;
 }
 
-.cadastros{
+.cadastros-card{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    border-top: 1px solid white;
-    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 107px;
+    font-size: 16px;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 5px 5px 10px 17px;
+    margin: 5px;
 }
 
-.cadastro-tabela{
-    margin-top: 50px;
-}
-
-th{
-    font-size: 18px;
+.botao-apagar{
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #a5960d;
+    color: white;
+    margin-top: 3px;
+    width: 289px;
+    height: 20px;
 }
 
-th,td{
-    border: 1px solid white;
-    padding: 5px 40px;
+.botao-apagar:hover{
+    background-color: #74690d;
+    cursor: pointer;
 }
 
-td{
-    font-size: 18px;
+.botao-apagar:active{
+    background-color: #a5960d;
 }

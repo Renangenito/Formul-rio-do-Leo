@@ -1,30 +1,30 @@
 import React from 'react';
 
-const Cadastros = () =>{
+const Cadastros = () => {
+    const lista = localStorage.getItem("listaCadastros")
+    const listaJson = JSON.parse(lista)
+
+    let cadastrados = listaJson.map((c, i) =>
+        <div className="cadastros-card" key={i}>Nome: {c.nome} <br/>CPF: {c.cpf} <br/> 
+       Telefone: {c.telefone} <br/>Email: {c.email}  
+       <button className="botao-apagar" onClick={(event)=>{ event.target.parentNode.remove()}}>Apagar</button>
+       </div>
+      
+    )
+    console.log(`testes ${lista}`)
     
-    return(
+
+    return (
         <>
-        <h1>Cadastrados</h1>
-        <div className="cadastros">
-            <table className="cadastro-tabela" id="tabela">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody id="corpo-tabela">
-                    <tr>
-                        <td>Renan</td>
-                        <td>12345678909</td>
-                        <td>11987654234</td>
-                        <td>renan@email.com</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h1>Cadastrados</h1>
+            <div className="cadastros">
+                <div>
+                    <div className="cadastrados">    
+                        {cadastrados}
+                    </div>
+
+                </div>
+            </div>
         </>
     )
 }
