@@ -9,6 +9,7 @@ const FormularioCadastro = () => {
    
     const handleClick = (e) =>{
         e.preventDefault()
+
         
        listaCadastros.push({
             nome: nomeCad,
@@ -28,7 +29,7 @@ const FormularioCadastro = () => {
     return (
        <div>
         
-        <form className="formulario-cadastro" >
+        <form onSubmit={handleClick} className="formulario-cadastro" >
 
             <div className="formulario-div">
                 <h1 className="formulario-titulo">Formulário de cadastro</h1>
@@ -82,7 +83,7 @@ const FormularioCadastro = () => {
                 />
             </div>
             <div className="div-botao">
-                <button className="botao" onClick={handleClick}>Cadastrar</button>
+                <button className="botao" >Cadastrar</button>
             </div>
         </form>
        

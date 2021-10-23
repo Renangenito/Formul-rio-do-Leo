@@ -57,3 +57,7 @@ h1{
 .botao-apagar:active{
     background-color: #a5960d;
 }
+
+.invisivel{
+    display: none;
+}
