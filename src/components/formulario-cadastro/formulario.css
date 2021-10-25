@@ -64,3 +64,22 @@
     background-color: #a5960d;
 }
 
+/* VERSÃO MOBILE */
+@media screen and (max-width: 823px){
+    .formulario-cadastro{
+        width: 360px;
+        margin-top: -98px;
+
+    }
+    .formulario-cadastro input{
+        width: 318px;
+        height: 40px;
+    } 
+    .botao{
+        width: 321px;
+        height: 42px;
+    }
+    .formulario-titulo{
+        font-size: 34px;
+    }
+}

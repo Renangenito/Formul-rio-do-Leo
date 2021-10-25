@@ -1,25 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import useLocalStorage from '../../hooks/useLocalStorage'
 
 const FormularioCadastro = () => {
     const [nomeCad, setNome] = useState("")
     const [cpfCad, setCpf] = useState("")
     const [telefoneCad, setTelefone] = useState("")
     const [emailCad, setEmail] = useState("")
-    let listaCadastros = JSON.parse(localStorage.getItem('listaCadastros') || '[]')
+    const [usuario, setUsuario] = useLocalStorage("usuario", {})
+
+    function criarId(){
+        return Math.floor(Math.random() * 1000);
+    }
+
+
+    let listaCadastros = JSON.parse(localStorage.getItem("usuario") || '[]')
    
     const handleClick = (e) =>{
         e.preventDefault()
 
         
-       listaCadastros.push({
+        listaCadastros.push({
             nome: nomeCad,
             cpf: cpfCad,
             telefone: telefoneCad,
-            email: emailCad
+            email: emailCad,
+            id: criarId()
         })
         
-        localStorage.setItem("listaCadastros", JSON.stringify(listaCadastros))
-        
+        setUsuario(listaCadastros)
+
         setNome("")
         setCpf("")
         setTelefone("")

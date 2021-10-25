@@ -1,31 +1,33 @@
 import React from 'react';
-
+import useLocalStorage from '../../hooks/useLocalStorage';
 const Cadastros = () => {
-
-let listaCadastros = localStorage.getItem('listaCadastros')
+    const [usuario, setUsuario] = useLocalStorage("usuario", {})
+     
+    const handleDelete = (idUsuario) =>{
+        const listaFiltrada = usuario.filter( usuario => usuario.id !== idUsuario)
+        setUsuario(listaFiltrada)
+    }
 
     
-    const listaJson = JSON.parse(listaCadastros)
-    
+    let cadastrados = usuario.map((usuario) =>
+       
+        <div className="cadastros-card" id={usuario.id} key={usuario.id}>Nome: {usuario.nome} <br />CPF: {usuario.cpf} <br />
+            Telefone: {usuario.telefone} <br />Email: {usuario.email}
+            <button className="botao-apagar" onClick={()=> handleDelete(usuario.id)}>Apagar</button>
+            {/* <button className="botao-apagar" onClick={()=> handleEdit(usuario.id)}>Editar</button> */}
+        </div> 
 
-    let cadastrados = listaJson.map((c, i) =>
-        <div  className="cadastros-card" key={i}>Nome: {c.nome} <br/>CPF: {c.cpf} <br/> 
-       Telefone: {c.telefone} <br/>Email: {c.email}  
-       <button className="botao-apagar" onClick={(event)=>{ event.target.parentNode.remove()}}>Apagar</button>
-       </div>
-      
-    )  
+    )
 
-   
-    
     return (
         <>
 
             <h1>Cadastrados</h1>
             <div className="cadastros">
                 <div>
-                    <div className="cadastrados">    
+                    <div className="cadastrados">
                         {cadastrados}
+                 
                     </div>
 
                 </div>
