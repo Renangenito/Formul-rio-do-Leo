@@ -3,6 +3,7 @@ import './App.css';
 import './components/formulario-cadastro/formulario.css'
 import './components/cabecalho/cabecalho.css'
 import './components/cadastros/cadastros.css'
+import './components/cadastros/modal.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import FormularioCadastro from './components/formulario-cadastro/FormularioCadastro';
 import Cadastros from './components/cadastros/Cadastros';

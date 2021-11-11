@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+.modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 165px;
+    left: 450px;
+    width: 430px;
+    height: 270px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px inset;    
+    z-index: -1;
+    opacity: 0;
+}
+.active{
+    z-index: 1;
+    opacity: 1;
+}
+.cabecalho-modal{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.titulo-modal{
+    font-family: 'Playfair Display', serif;
+    color: #4d59e0;
+    font-size: 20px;
+    text-align: center;
+    width: 92%;
+    height: 32px;
+    margin: 25px auto;
+    border-bottom: 1px solid #4d59e0;
+}
+
+.close-modal{
+    font-size: 25px;
+    color: #4d59e0;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.close-modal:hover{
+    cursor: pointer;
+    color: #3e47b1;
+}
+.close-modal:active{
+    color: #4d59e0;
+}
+
+.formulario-modal{
+    width: 430px;
+    height: 97px;
+}
+
+.div-nome-cpf, .div-telefone-email, .div-botoes{
+    display: flex;
+    flex-direction: row;
+    width: 388px;
+    height: 37px;
+    margin: 12px 15px;
+
+}
+
+.formulario-modal input{
+    width: 300px;
+    height: 35px;
+    border: none;
+    background-color: #dde0fd;
+    border-radius: 6px;
+    margin-left: 12px;
+    outline: none;
+}
+.formulario-modal input::placeholder{
+    color: #4d59e0;
+    padding-left: 20px;
+}
+.div-botoes{
+    width: 224px;
+    margin-left: 95px;
+    margin-top: 35px;
+}
+.botao-confirmar, .botao-cancelar{
+    background-color: #4d59e0;
+    border: none;
+    width: 100px;
+    border-radius: 20px;
+    color: white;
+    margin-left: 12px;
+}
+.botao-cancelar{
+    background-color: #b73c17;
+}
+
+.botao-confirmar:hover{
+    background-color: #283196;
+    cursor: pointer;
+}
+.botao-confirmar:active{
+    background-color: #3540bb;
+}
+
+.botao-cancelar:hover{
+    background-color: #993314;
+    cursor: pointer;
+}
+
+.botao-cancelar:active{
+    background-color: #b73c17;
+}

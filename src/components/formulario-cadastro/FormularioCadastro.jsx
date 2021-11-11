@@ -7,7 +7,7 @@ const FormularioCadastro = () => {
     const [telefoneCad, setTelefone] = useState("")
     const [emailCad, setEmail] = useState("")
     const [usuario, setUsuario] = useLocalStorage("usuario", {})
-
+    console.log(usuario)
     function criarId(){
         return Math.floor(Math.random() * 1000);
     }
@@ -72,6 +72,7 @@ const FormularioCadastro = () => {
             <div className="formulario-div">
                 <label className="formulario-label" htmlFor="telefone">Telefone</label>
                 <input className="formulario-telefone"
+                    pattern='[0-9]{10,11}'
                     type="tel"
                     name="telefone"
                     value={telefoneCad}

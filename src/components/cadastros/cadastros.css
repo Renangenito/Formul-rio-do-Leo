@@ -30,36 +30,54 @@ h1{
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 107px;
+    height: 125px;
     font-size: 16px;
-    background-color: wheat;
+    background-color: #dde0fd;
+    color: #283193;
     border-radius: 10px;
     padding: 5px 5px 10px 17px;
     margin: 5px;
 }
 
-.botao-apagar{
+.botao-editar, .botao-apagar{
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    background-color: #a5960d;
+    background-color: #3540bb;
     color: white;
     margin-top: 3px;
     width: 289px;
     height: 20px;
 }
+.botao-editar{
+    margin-top: 7px;
+}
+.botao-editar:hover{
+    background-color: #283196;
+    cursor: pointer;
+}
+.botao-editar:active{
+    background-color: #3540bb;
+}
+
+.botao-apagar{
+    background-color: #b73c17;
+}
 
 .botao-apagar:hover{
-    background-color: #74690d;
+    background-color: #993314;
     cursor: pointer;
 }
 
 .botao-apagar:active{
-    background-color: #a5960d;
+    background-color: #b73c17;
 }
 
 .invisivel{
     display: none;
+}
+.cadastros-card div{
+    margin: 0;
 }
 
 /* VERSÃO MOBILE */
